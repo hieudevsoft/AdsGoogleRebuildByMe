@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
+import com.google.android.gms.example.apidemo.ads.AdsResourceFactory
 import kotlinx.android.synthetic.main.fragment_admob_ad_targeting.targeting_ad_view
 import kotlinx.android.synthetic.main.fragment_admob_ad_targeting.targeting_btn_loadad
 import kotlinx.android.synthetic.main.fragment_admob_ad_targeting.targeting_rb_rating_g

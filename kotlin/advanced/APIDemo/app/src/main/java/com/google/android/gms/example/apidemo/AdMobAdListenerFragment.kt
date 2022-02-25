@@ -1,22 +1,23 @@
 package com.google.android.gms.example.apidemo
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.LoadAdError
-import kotlinx.android.synthetic.main.fragment_admob_ad_listener.listener_ad_view
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.example.apidemo.ads.*
+import kotlinx.android.synthetic.main.fragment_admob_ad_listener.*
+
 
 /**
  * The [AdMobAdListenerFragment] demonstrates the use of the [com.google.android.gms.ads.AdListener]
  * class.
  */
 class AdMobAdListenerFragment : Fragment() {
-
+  private lateinit var ads:BaseAds
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
@@ -27,35 +28,42 @@ class AdMobAdListenerFragment : Fragment() {
 
   override fun onActivityCreated(savedInstanceState: Bundle?) {
     super.onActivityCreated(savedInstanceState)
+    ads = AdsResourceFactory.newInstance(requireActivity(),AdsType.BANNER)!!
+    ads.apply {
+      setSize(AdSize.BANNER)
+      setUnitAd(getString(R.string.admob_banner_ad_unit_id))
+      setLayoutAddAds(containerAdsView)
+      setAdsListener(object:AdsCallback{
+        override fun onAdsCompleteListener() {
 
-    listener_ad_view.adListener = object : AdListener() {
-      private fun showToast(message: String) {
-        val context = this@AdMobAdListenerFragment.view?.context
-        if (context != null) {
-          Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
-      }
 
-      override fun onAdLoaded() {
-        showToast("Ad loaded.")
-      }
+        override fun onAdsLoadedListener() {
+          showAdIfAvailable()
+        }
 
-      override fun onAdFailedToLoad(loadAdError: LoadAdError) {
-        val error = "domain: ${loadAdError.domain}, code: ${loadAdError.code}, " +
-          "message: ${loadAdError.message}"
-        showToast("Ad failed to load with error $error.")
-      }
+        override fun onAdsFailedListener() {
 
-      override fun onAdOpened() {
-        showToast("Ad opened.")
-      }
+        }
 
-      override fun onAdClosed() {
-        showToast("Ad closed.")
-      }
+        override fun onAdsOpenedListener() {
+
+        }
+
+        override fun onAdsCloseListener() {
+
+        }
+
+        override fun onAdsClickedListener() {
+
+        }
+
+        override fun onAddAdsLayoutChangeListener(width: Int, height: Int) {
+          Log.d("AdsBannerManager", "onAddAdsLayoutChangeListener: $width $height")
+        }
+      })
+      loadAd()
     }
 
-    val adRequest = AdRequest.Builder().build()
-    listener_ad_view.loadAd(adRequest)
   }
 }

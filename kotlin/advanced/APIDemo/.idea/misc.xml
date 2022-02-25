@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/ad_simple_custom_template.xml" value="0.14447463768115942" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/app_bar_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/fragment_admob_ad_listener.xml" value="0.15" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/fragment_admob_ad_targeting.xml" value="0.18568840579710144" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/fragment_admob_banner_sizes.xml" value="0.11684782608695653" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/fragment_admob_custom_mute_this_ad.xml" value="0.18568840579710144" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/fragment_gam_app_events.xml" value="0.17074275362318841" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/fragment_gam_fluid_size.xml" value="0.18" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/layout/native_ad.xml" value="0.18568840579710144" />
+        <entry key="..\:/DEVS/ANDROID_PROJECT/googleads-mobile-android-examples/kotlin/advanced/APIDemo/app/src/main/res/menu/activity_main_drawer.xml" value="0.18645833333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

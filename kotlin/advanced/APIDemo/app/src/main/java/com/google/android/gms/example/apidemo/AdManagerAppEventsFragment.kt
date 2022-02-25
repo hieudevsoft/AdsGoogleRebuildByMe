@@ -29,7 +29,6 @@ class AdManagerAppEventsFragment : Fragment() {
 
   override fun onActivityCreated(savedInstanceState: Bundle?) {
     super.onActivityCreated(savedInstanceState)
-
     appevents_av_main.appEventListener = AppEventListener { name, data ->
       // The Ad Manager ad that this fragment loads contains JavaScript code that sends App
       // Events to the host application. This AppEventListener receives those events,
